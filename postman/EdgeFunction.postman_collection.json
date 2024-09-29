@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "6995aa52-8460-4867-a754-9b0bb53de21b",
+		"name": "EdgeFunction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37857539"
+	},
+	"item": [
+		{
+			"name": "ProcessOrder",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user_id\": \"096a09fd-f7fd-4118-9836-4d7ba4d77062\",\r\n  \"shipping_address\": \"Dunajska cesta 145\",\r\n  \"recipient_name\": \"Janez Novak\",\r\n  \"items\": [\r\n    {\r\n      \"item_id\": \"1\",\r\n      \"quantity\": 2,\r\n      \"total_price\": 19.99\r\n    },\r\n    {\r\n      \"item_id\": \"2\",\r\n      \"quantity\": 1,\r\n      \"total_price\": 29.99\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rtnwcjpbqoybtmzbppvj.supabase.co/functions/v1/process-order",
+					"protocol": "https",
+					"host": [
+						"rtnwcjpbqoybtmzbppvj",
+						"supabase",
+						"co"
+					],
+					"path": [
+						"functions",
+						"v1",
+						"process-order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
